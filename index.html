@@ -30,13 +30,6 @@
     <!-- Skip to Content (Accessibility) -->
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-    <!-- Page Loader -->
-    <div id="page-loader" class="page-loader">
-        <div class="loader-content">
-            <div class="loader-spinner"></div>
-            <span class="loader-text">Momentum Tutoring</span>
-        </div>
-    </div>
 
     <!-- Toast Container -->
     <div id="toast-container" class="toast-container"></div>
@@ -52,11 +45,11 @@
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#testimonials" class="nav-link">Stories</a></li>
-                <li><a href="#faq" class="nav-link">FAQ</a></li>
                 <li><a href="#volunteer" class="nav-link">Volunteer</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -84,11 +77,11 @@
         <ul class="mobile-nav-links">
             <li><a href="#home" class="mobile-nav-link">Home</a></li>
             <li><a href="#about" class="mobile-nav-link">About</a></li>
-            <li><a href="#services" class="mobile-nav-link">Services</a></li>
             <li><a href="#impact" class="mobile-nav-link">Impact</a></li>
+            <li><a href="#services" class="mobile-nav-link">Services</a></li>
             <li><a href="#testimonials" class="mobile-nav-link">Stories</a></li>
-            <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
             <li><a href="#volunteer" class="mobile-nav-link">Volunteer</a></li>
+            <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
         </ul>
         <div class="mobile-menu-footer">
             <a href="#request" class="btn btn-primary open-request-modal"
@@ -555,11 +548,31 @@
 
     <!-- Footer -->
     <footer>
+        <div class="footer-wave">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1440,60 L1440,100 L0,100 Z" fill="currentColor" />
+            </svg>
+        </div>
         <div class="container">
+            <!-- Footer Top CTA -->
+            <div class="footer-cta">
+                <div class="footer-cta-text">
+                    <h3>Ready to make a difference?</h3>
+                    <p>Whether you need tutoring or want to volunteer, we'd love to hear from you.</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="#request" class="btn btn-white open-request-modal">Request Tutoring</a>
+                    <a href="#volunteer" class="btn btn-outline-white open-volunteer-modal">Volunteer</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
             <div class="footer-content">
                 <div class="footer-brand">
                     <h3><span class="logo-icon">🚀</span> Momentum Tutoring</h3>
-                    <p>Empowering students through free, personalized education in San Antonio.</p>
+                    <p>A 501(c)(3) nonprofit dedicated to empowering underserved students through free, personalized
+                        education in San Antonio, TX.</p>
                     <div class="footer-socials">
                         <a href="mailto:momentumtotutoring@gmail.com" class="social-link" aria-label="Email">
                             <i data-lucide="mail" class="icon-sm"></i>
@@ -572,40 +585,46 @@
 
                 <div class="footer-links">
                     <div class="footer-col">
-                        <h4>Navigate</h4>
+                        <h4>Explore</h4>
                         <ul>
                             <li><a href="#home">Home</a></li>
                             <li><a href="#about">About Us</a></li>
+                            <li><a href="#impact">Our Impact</a></li>
                             <li><a href="#services">Services</a></li>
-                            <li><a href="#impact">Impact</a></li>
                         </ul>
                     </div>
                     <div class="footer-col">
                         <h4>Get Involved</h4>
                         <ul>
                             <li><a href="#volunteer">Volunteer</a></li>
-                            <li><a href="#request">Request Tutoring</a></li>
+                            <li><a href="#request" class="open-request-modal">Request Tutoring</a></li>
                             <li><a href="#testimonials">Success Stories</a></li>
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="footer-contact">
-                    <h4>Contact Us</h4>
-                    <div class="contact-item">
-                        <i data-lucide="mail" class="icon-sm"></i>
-                        <span>momentumtotutoring@gmail.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <i data-lucide="map-pin" class="icon-sm"></i>
-                        <span>San Antonio, TX</span>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>
+                                <a href="mailto:momentumtotutoring@gmail.com">
+                                    <i data-lucide="mail" class="icon-sm"></i>
+                                    <span>momentumtotutoring@gmail.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-lucide="map-pin" class="icon-sm"></i>
+                                    <span>San Antonio, TX</span>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
 
-            <div class="copyright">
-                <p>&copy; 2026 Momentum Tutoring. A 501(c)(3) Organization. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Momentum Tutoring. All rights reserved.</p>
+                <p class="footer-tagline">Built with 💚 for the students of San Antonio</p>
             </div>
         </div>
     </footer>
