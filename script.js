@@ -7,13 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // Hide page loader
-    const pageLoader = document.getElementById('page-loader');
-    if (pageLoader) {
-        setTimeout(() => {
-            pageLoader.classList.add('hidden');
-        }, 600);
-    }
+
 
     /* =============================================
        TOAST NOTIFICATION SYSTEM
