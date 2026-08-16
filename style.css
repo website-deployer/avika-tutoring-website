@@ -1787,6 +1787,116 @@ footer {
     transform: translate(0);
 }
 
+/* ============================================================
+   SPRINT 2 — MOTION & THEME (premium polish)
+   Motion is transform/opacity only; all disabled under
+   prefers-reduced-motion. No color tokens changed — only a
+   deeper, more intentional use of the existing palette.
+   ============================================================ */
+
+/* Hero entrance — auto-plays on load, no JS dependency */
+@keyframes heroIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: none; }
+}
+.hero-eyebrow { animation: heroIn 0.8s var(--ease-out) both 0.05s; }
+.hero-text h1 { animation: heroIn 0.9s var(--ease-out) both 0.18s; }
+.hero-buttons { animation: heroIn 0.8s var(--ease-out) both 0.34s; }
+.hero-trust   { animation: heroIn 0.8s var(--ease-out) both 0.48s; }
+.hero-image   { animation: heroIn 1s var(--ease-out) both 0.26s; }
+
+/* Restrained float for the hero badge (not a bounce) */
+@keyframes floaty {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+}
+.floating-badge { animation: floaty 6s ease-in-out infinite; }
+
+/* Button sheen sweep on hover */
+.btn { position: relative; overflow: hidden; }
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 55%; height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: skewX(-20deg) translateX(-260%);
+    transition: transform 0.65s var(--ease-out);
+    pointer-events: none;
+}
+.btn:hover::after { transform: skewX(-20deg) translateX(260%); }
+
+/* Image zoom on hover (wrappers already clip overflow) */
+.hero-img-wrapper img,
+.services-image img,
+.request-image img {
+    transition: transform 0.9s var(--ease-out);
+}
+.hero-img-wrapper:hover img,
+.services-image:hover img,
+.request-image:hover img {
+    transform: scale(1.05);
+}
+
+/* Card / list micro-interactions */
+.check-icon { transition: background 0.3s var(--ease-out), color 0.3s var(--ease-out); }
+.service-list li { transition: transform 0.3s var(--ease-out); }
+.service-list li:hover { transform: translateX(6px); }
+.service-list li:hover .check-icon { background: var(--accent-color); color: #fff; }
+.testimonial-card { transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out); }
+.testimonial-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+
+/* Theme instillation: accent eyebrows + heading rules + stat emphasis */
+.hero-eyebrow,
+.section-eyebrow { color: var(--accent-color); }
+.section h2 {
+    position: relative;
+    display: inline-block;
+}
+.section h2::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -12px;
+    width: 56px; height: 3px;
+    border-radius: 2px;
+    background: var(--accent-color);
+}
+.section-stats .stat-number,
+.section-stats .stat-suffix { color: var(--accent-color); }
+
+/* Nav link accent underline (draws on hover / active) */
+.nav-link { position: relative; }
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: -6px;
+    width: 100%; height: 2px;
+    background: var(--accent-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease-out);
+}
+.nav-link:hover,
+.nav-link.active { color: var(--accent-color); }
+.nav-link:hover::after,
+.nav-link.active::after { transform: scaleX(1); }
+
+/* Anchor offset so the fixed navbar never covers a heading */
+section[id] { scroll-margin-top: calc(var(--header-height) + 18px); }
+
+/* Themed focus, selection, scrollbar */
+:focus-visible { outline: 3px solid var(--accent-color); outline-offset: 3px; }
+::selection { background: var(--accent-color); color: #fff; }
+html { scrollbar-color: var(--primary-color) var(--bg-alt); }
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background: var(--bg-alt); }
+::-webkit-scrollbar-thumb {
+    background: var(--primary-light);
+    border-radius: 10px;
+    border: 3px solid var(--bg-alt);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary-color); }
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
     .nav-links {
