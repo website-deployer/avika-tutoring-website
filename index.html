@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momentum Tutoring | Free 1-on-1 Tutoring for San Antonio Students</title>
+    <meta name="description"
+        content="Momentum Tutoring pairs San Antonio elementary and middle school students with trained volunteer tutors — free, weekly, and built around how your child learns.">
+
+    <!-- Favicon: inline SVG monogram (no emoji) -->
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%236B8E7B'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='18' font-weight='700' fill='%23F6F1E8' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+
+    <!-- Google Fonts: editorial pairing -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Skip to Content (Accessibility) -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo" aria-label="Momentum Tutoring home">
+                <span class="logo-mark"><i data-lucide="rocket" class="icon-sm"></i></span>
+                <span>Momentum</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#impact" class="nav-link">Impact</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#stories" class="nav-link">Stories</a></li>
+                <li><a href="#volunteer" class="nav-link">Volunteer</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="#request" class="btn btn-primary nav-cta open-request-modal">Request Tutoring</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay"></div>
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation">
+        <div class="mobile-menu-header">
+            <span class="logo"><span class="logo-mark"><i data-lucide="rocket" class="icon-sm"></i></span>
+                Momentum</span>
+            <button class="mobile-close-btn" id="mobile-close-btn" aria-label="Close navigation menu">
+                <i data-lucide="x" class="icon-sm"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="#home" class="mobile-nav-link">Home</a></li>
+            <li><a href="#about" class="mobile-nav-link">About</a></li>
+            <li><a href="#impact" class="mobile-nav-link">Impact</a></li>
+            <li><a href="#services" class="mobile-nav-link">Services</a></li>
+            <li><a href="#stories" class="mobile-nav-link">Stories</a></li>
+            <li><a href="#volunteer" class="mobile-nav-link">Volunteer</a></li>
+            <li><a href="#faq" class="mobile-nav-link">FAQ</a></li>
+        </ul>
+        <div class="mobile-menu-footer">
+            <a href="#request" class="btn btn-primary open-request-modal" style="width: 100%; text-align: center;">Request
+                Tutoring</a>
+        </div>
+    </div>
+
+    <main id="main-content">
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-bg-shapes" aria-hidden="true">
+                <div class="hero-shape shape-1"></div>
+                <div class="hero-shape shape-2"></div>
+                <div class="hero-shape shape-3"></div>
+            </div>
+
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="hero-eyebrow">FREE 1-ON-1 TUTORING · SAN ANTONIO</span>
+                    <h1>Every student deserves a fair shot at <span class="text-gradient">learning.</span></h1>
+                    <p>Momentum Tutoring pairs San Antonio elementary and middle schoolers with trained high-school and
+                        college volunteers — free, weekly, and built around how your child actually learns.</p>
+                    <div class="hero-buttons">
+                        <a href="#request" class="btn btn-primary btn-lg open-request-modal">
+                            <span>Request a tutor</span>
+                            <i data-lucide="arrow-right" class="icon-sm"></i>
+                        </a>
+                        <a href="#impact" class="btn btn-secondary btn-lg">
+                            <span>See our impact</span>
+                        </a>
+                    </div>
+                    <div class="hero-trust">
+                        <ul class="trust-facts">
+                            <li><strong>50+</strong> San Antonio families supported</li>
+                            <li><strong>30</strong> volunteer tutors</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="hero-image">
+                    <div class="hero-img-wrapper">
+                        <img class="hero-photo" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1100&q=80"
+                            alt="A San Antonio student working through notebook problems at a library table"
+                            loading="eager" decoding="async"
+                            onerror="this.classList.add('img-failed')">
+                    </div>
+                    <div class="floating-badge badge-1">
+                        <div class="badge-icon"><i data-lucide="calendar-check" class="icon-sm"></i></div>
+                        <div>
+                            <strong>Weekly sessions</strong>
+                            <span>On your schedule</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-scroll-indicator" aria-hidden="true">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="section section-white">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-eyebrow">ABOUT US</span>
+                    <h2>What we actually do</h2>
+                    <p>We give San Antonio students free, one-on-one support — so a tight budget never decides whether a
+                        kid keeps up.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="feature-card reveal-up" style="--delay: 0s;">
+                        <div class="icon-box"><i data-lucide="target" class="icon-md"></i></div>
+                        <h3>Our Mission</h3>
+                        <p>Free academic support for underserved students, so every child in San Antonio has the
+                            momentum to keep up, catch up, and get ahead.</p>
+                    </div>
+
+                    <div class="feature-card reveal-up" style="--delay: 0.1s;">
+                        <div class="icon-box"><i data-lucide="users" class="icon-md"></i></div>
+                        <h3>Who We Serve</h3>
+                        <p>Elementary and middle schoolers (grades K–8) across San Antonio — especially families who
+                            can't afford private tutoring.</p>
+                    </div>
+
+                    <div class="feature-card reveal-up" style="--delay: 0.2s;">
+                        <div class="icon-box"><i data-lucide="compass" class="icon-md"></i></div>
+                        <h3>Personalized Learning</h3>
+                        <p>We match each student with a tutor and a plan built around how they learn best — not a
+                            one-size-fits-all worksheet.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Stats Section -->
+        <section id="impact" class="section section-stats">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-eyebrow">OUR IMPACT</span>
+                    <h2>Real students, real progress</h2>
+                    <p>Every number is a local student whose week got a little steadier because someone showed up.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card reveal-up" style="--delay: 0s;">
+                        <div class="stat-icon"><i data-lucide="graduation-cap" class="icon-lg"></i></div>
+                        <div class="stat-figure"><span class="stat-number" data-target="50">0</span><span
+                                class="stat-suffix">+</span></div>
+                        <div class="stat-label">Students helped</div>
+                    </div>
+                    <div class="stat-card reveal-up" style="--delay: 0.1s;">
+                        <div class="stat-icon"><i data-lucide="heart-handshake" class="icon-lg"></i></div>
+                        <div class="stat-figure"><span class="stat-number" data-target="30">0</span><span
+                                class="stat-suffix">+</span></div>
+                        <div class="stat-label">Active volunteers</div>
+                    </div>
+                    <div class="stat-card reveal-up" style="--delay: 0.2s;">
+                        <div class="stat-icon"><i data-lucide="book-open" class="icon-lg"></i></div>
+                        <div class="stat-figure"><span class="stat-number" data-target="8">0</span></div>
+                        <div class="stat-label">Core subjects</div>
+                    </div>
+                    <div class="stat-card reveal-up" style="--delay: 0.3s;">
+                        <div class="stat-icon"><i data-lucide="trending-up" class="icon-lg"></i></div>
+                        <div class="stat-figure"><span class="stat-number" data-target="95">0</span><span
+                                class="stat-suffix">%</span></div>
+                        <div class="stat-label">Improved confidence</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What We Offer Section -->
+        <section id="services" class="section">
+            <div class="container services-container">
+                <div class="services-image reveal-left">
+                    <img class="section-photo"
+                        src="https://images.unsplash.com/photo-1497486751825-1233686d5d80?auto=format&fit=crop&w=1000&q=80"
+                        alt="Volunteer tutor and student reviewing books together at a San Antonio library"
+                        loading="lazy" decoding="async" onerror="this.classList.add('img-failed')">
+                </div>
+                <div class="services-content reveal-right">
+                    <span class="section-eyebrow">OUR SERVICES</span>
+                    <h2>What we offer</h2>
+                    <p class="services-desc">Practical, consistent support delivered by volunteers who actually remember
+                        your child's name.</p>
+
+                    <ul class="service-list">
+                        <li>
+                            <span class="check-icon"><i data-lucide="check" class="icon-sm"></i></span>
+                            <span>Free tutoring in reading, writing, and math</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i data-lucide="check" class="icon-sm"></i></span>
+                            <span>Homework help and test prep</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i data-lucide="check" class="icon-sm"></i></span>
+                            <span>Study-skills coaching, not just answers</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i data-lucide="check" class="icon-sm"></i></span>
+                            <span>Mentorship from vetted high-school & college volunteers</span>
+                        </li>
+                        <li>
+                            <span class="check-icon"><i data-lucide="check" class="icon-sm"></i></span>
+                            <span>Small-group confidence workshops</span>
+                        </li>
+                    </ul>
+
+                    <div class="location-badge">
+                        <i data-lucide="map-pin" class="icon-sm"></i>
+                        <div>
+                            <strong>San Antonio, TX</strong>
+                            <span>Serving the San Antonio area now, with plans to expand.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="stories" class="section section-white">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-eyebrow">SUCCESS STORIES</span>
+                    <h2>From San Antonio families</h2>
+                    <p>The parents, students, and volunteers who show up week after week.</p>
+                </div>
+
+                <div class="testimonials-carousel" id="testimonials-carousel">
+                    <div class="testimonials-track" id="testimonials-track">
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                <i data-lucide="star" class="star-icon"></i><i data-lucide="star"
+                                    class="star-icon"></i><i data-lucide="star" class="star-icon"></i><i
+                                    data-lucide="star" class="star-icon"></i><i data-lucide="star" class="star-icon"></i>
+                            </div>
+                            <p class="testimonial-quote">"My daughter went from avoiding math to actually enjoying it.
+                                Her tutor is patient and really connects with the kids — not like a worksheet machine."
+                            </p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: var(--primary-light);">M</div>
+                                <div>
+                                    <strong>Maria G.</strong>
+                                    <span>Parent of a 4th grader</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                <i data-lucide="star" class="star-icon"></i><i data-lucide="star"
+                                    class="star-icon"></i><i data-lucide="star" class="star-icon"></i><i
+                                    data-lucide="star" class="star-icon"></i><i data-lucide="star" class="star-icon"></i>
+                            </div>
+                            <p class="testimonial-quote">"Momentum gave my son the confidence he needed. His grades are
+                                up and he actually looks forward to his sessions now."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: var(--accent-color);">J</div>
+                                <div>
+                                    <strong>James R.</strong>
+                                    <span>Parent of a 6th grader</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                <i data-lucide="star" class="star-icon"></i><i data-lucide="star"
+                                    class="star-icon"></i><i data-lucide="star" class="star-icon"></i><i
+                                    data-lucide="star" class="star-icon"></i><i data-lucide="star" class="star-icon"></i>
+                            </div>
+                            <p class="testimonial-quote">"As a volunteer, I love the lightbulb moments — watching a
+                                student finally get it and grin is the best part of my week."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: var(--primary-color);">S</div>
+                                <div>
+                                    <strong>Sarah K.</strong>
+                                    <span>Volunteer tutor</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                                <i data-lucide="star" class="star-icon"></i><i data-lucide="star"
+                                    class="star-icon"></i><i data-lucide="star" class="star-icon"></i><i
+                                    data-lucide="star" class="star-icon"></i><i data-lucide="star" class="star-icon"></i>
+                            </div>
+                            <p class="testimonial-quote">"I used to hate reading, but my tutor made it fun. Now I finish
+                                chapter books all by myself."</p>
+                            <div class="testimonial-author">
+                                <div class="testimonial-avatar" style="background: #8BADA0;">L</div>
+                                <div>
+                                    <strong>Lucas T.</strong>
+                                    <span>3rd grade student</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-controls">
+                        <button class="carousel-btn carousel-prev" aria-label="Previous story">
+                            <i data-lucide="chevron-left" class="icon-sm"></i>
+                        </button>
+                        <div class="carousel-dots" id="carousel-dots"></div>
+                        <button class="carousel-btn carousel-next" aria-label="Next story">
+                            <i data-lucide="chevron-right" class="icon-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Volunteer Section -->
+        <section id="volunteer" class="section">
+            <div class="container">
+                <div class="cta-card reveal-up">
+                    <div class="cta-bg-decor" aria-hidden="true"></div>
+                    <span class="cta-eyebrow">VOLUNTEER</span>
+                    <h2>Share what you know. Change a Tuesday afternoon.</h2>
+                    <p>Are you a high-school or college student in San Antonio? Spend a couple of hours a week helping a
+                        younger student find their footing — and earn service hours while you're at it.</p>
+                    <div class="cta-perks">
+                        <div class="cta-perk">
+                            <i data-lucide="award" class="icon-sm"></i>
+                            <span>Verified service hours</span>
+                        </div>
+                        <div class="cta-perk">
+                            <i data-lucide="handshake" class="icon-sm"></i>
+                            <span>Real leadership experience</span>
+                        </div>
+                        <div class="cta-perk">
+                            <i data-lucide="map-pin" class="icon-sm"></i>
+                            <span>Impact your own city</span>
+                        </div>
+                    </div>
+                    <a href="#volunteer" class="btn btn-white btn-lg open-volunteer-modal">
+                        <span>Become a volunteer</span>
+                        <i data-lucide="arrow-right" class="icon-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Request Tutoring Section -->
+        <section id="request" class="section section-white">
+            <div class="container services-container request-layout">
+                <div class="request-content reveal-left">
+                    <span class="section-eyebrow">GET STARTED</span>
+                    <h2>Request a tutor</h2>
+                    <p>Parents and guardians can request a tutor for their child in a few minutes. Tell us what your
+                        student needs and we'll take it from there.</p>
+
+                    <div class="how-it-works">
+                        <h4>How it works</h4>
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <div class="step-number">1</div>
+                                <div>
+                                    <strong>Fill out the form</strong>
+                                    <span>Tell us about your student and where they're stuck.</span>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">2</div>
+                                <div>
+                                    <strong>We match you</strong>
+                                    <span>We pair your child with a volunteer tutor who fits.</span>
+                                </div>
+                            </div>
+                            <div class="step-item">
+                                <div class="step-number">3</div>
+                                <div>
+                                    <strong>Sessions begin</strong>
+                                    <span>Weekly meetings start, and confidence builds.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#request" class="btn btn-primary btn-lg open-request-modal">
+                        <span>Request a tutor now</span>
+                        <i data-lucide="arrow-right" class="icon-sm"></i>
+                    </a>
+                </div>
+                <div class="request-image reveal-right">
+                    <img class="section-photo"
+                        src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=1000&q=80"
+                        alt="Elementary students raising their hands during a San Antonio classroom lesson"
+                        loading="lazy" decoding="async" onerror="this.classList.add('img-failed')">
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section">
+            <div class="container">
+                <div class="section-header reveal-up">
+                    <span class="section-eyebrow">FAQ</span>
+                    <h2>Frequently asked questions</h2>
+                    <p>Straight answers, no jargon.</p>
+                </div>
+
+                <div class="faq-list" id="faq-list">
+                    <div class="faq-item reveal-up" style="--delay: 0s;">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Is Momentum Tutoring really free?</span>
+                            <i data-lucide="chevron-down" class="faq-icon icon-sm"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes. We're a registered 501(c)(3), and every session is free for families. We're funded by
+                                local donors and grants — never by the students we serve.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up" style="--delay: 0.05s;">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What grade levels do you serve?</span>
+                            <i data-lucide="chevron-down" class="faq-icon icon-sm"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Right now we serve elementary and middle school students (grades K–8) in San Antonio.
+                                High-school support is on our roadmap.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up" style="--delay: 0.1s;">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>What subjects do you tutor?</span>
+                            <i data-lucide="chevron-down" class="faq-icon icon-sm"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Reading, writing, math, and study skills — plus homework help and test prep. Tell us what
+                                your student needs and we'll match accordingly.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up" style="--delay: 0.15s;">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Who are the tutors?</span>
+                            <i data-lucide="chevron-down" class="faq-icon icon-sm"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Vetted high-school and college volunteers, trained to work with younger students. Every
+                                tutor is background-checked before they're matched.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up" style="--delay: 0.2s;">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>How do I sign up my child?</span>
+                            <i data-lucide="chevron-down" class="faq-icon icon-sm"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tap "Request Tutoring," fill out the short form, and we'll match your child with a tutor
+                                within a few days.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item reveal-up" style="--delay: 0.25s;">
+                        <button class="faq-question" aria-expanded="false">
+                            <span>Can I volunteer if I'm outside San Antonio?</span>
+                            <i data-lucide="chevron-down" class="faq-icon icon-sm"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We're piloting virtual sessions. If you're outside San Antonio but interested in remote
+                                tutoring, reach out and we'll see if it's a fit.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-wave" aria-hidden="true">
+            <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+                <path d="M0,60 C360,120 720,0 1440,60 L1440,100 L0,100 Z" fill="currentColor" />
+            </svg>
+        </div>
+        <div class="container">
+            <!-- Footer Top CTA -->
+            <div class="footer-cta">
+                <div class="footer-cta-text">
+                    <h3>Ready to make a difference?</h3>
+                    <p>Whether you need tutoring or want to volunteer, we'd love to hear from you.</p>
+                </div>
+                <div class="footer-cta-actions">
+                    <a href="#request" class="btn btn-white open-request-modal">Request Tutoring</a>
+                    <a href="#volunteer" class="btn btn-outline-white open-volunteer-modal">Volunteer</a>
+                </div>
+            </div>
+
+            <div class="footer-divider"></div>
+
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3><span class="logo-mark"><i data-lucide="rocket" class="icon-sm"></i></span> Momentum Tutoring</h3>
+                    <p>A 501(c)(3) nonprofit helping San Antonio students keep up, catch up, and get ahead — free,
+                        one-on-one, and built around how they learn.</p>
+                    <div class="footer-socials">
+                        <a href="mailto:momentumtotutoring@gmail.com" class="social-link" aria-label="Email">
+                            <i data-lucide="mail" class="icon-sm"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i data-lucide="instagram" class="icon-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h4>Explore</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#impact">Our Impact</a></li>
+                            <li><a href="#services">Services</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Get Involved</h4>
+                        <ul>
+                            <li><a href="#volunteer">Volunteer</a></li>
+                            <li><a href="#request" class="open-request-modal">Request Tutoring</a></li>
+                            <li><a href="#stories">Success Stories</a></li>
+                            <li><a href="#faq">FAQ</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contact</h4>
+                        <ul>
+                            <li>
+                                <a href="mailto:momentumtotutoring@gmail.com">
+                                    <i data-lucide="mail" class="icon-sm"></i>
+                                    <span>momentumtotutoring@gmail.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i data-lucide="map-pin" class="icon-sm"></i>
+                                    <span>San Antonio, TX</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Momentum Tutoring. All rights reserved.</p>
+                <p class="footer-tagline">Made in San Antonio, for San Antonio students.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up" class="icon-sm"></i>
+    </button>
+
+    <!-- Volunteer Modal -->
+    <div id="volunteer-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="volunteer-modal-title">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close volunteer form">
+                <i data-lucide="x" class="icon-sm"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon"><i data-lucide="handshake" class="icon-lg"></i></div>
+                <h2 id="volunteer-modal-title">Volunteer with us</h2>
+                <p>Thanks for stepping up. Fill in the details and we'll be in touch.</p>
+            </div>
+            <form id="volunteer-form" novalidate>
+                <div class="form-group">
+                    <label for="vol-name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="vol-name" placeholder="Enter your full name" required>
+                    <span class="form-error" id="vol-name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="vol-email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="vol-email" placeholder="your.email@example.com" required>
+                    <span class="form-error" id="vol-email-error"></span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="vol-grade">Grade / Age <span class="required">*</span></label>
+                        <input type="text" id="vol-grade" placeholder="e.g. 11th Grade" required>
+                        <span class="form-error" id="vol-grade-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="vol-phone">Phone (Optional)</label>
+                        <input type="tel" id="vol-phone" placeholder="(210) 555-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="vol-subjects">Subjects You Can Tutor <span class="required">*</span></label>
+                    <input type="text" id="vol-subjects" placeholder="e.g. Math (Algebra), Science" required>
+                    <span class="form-error" id="vol-subjects-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="vol-message">Why do you want to volunteer? (Optional)</label>
+                    <textarea id="vol-message" rows="3" placeholder="Tell us a bit about yourself..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form">
+                    <span>Send Application</span>
+                    <i data-lucide="send" class="icon-sm"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Request Tutor Modal -->
+    <div id="request-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="request-modal-title">
+        <div class="modal-content">
+            <button class="close-btn" aria-label="Close request form">
+                <i data-lucide="x" class="icon-sm"></i>
+            </button>
+            <div class="modal-header">
+                <div class="modal-icon"><i data-lucide="graduation-cap" class="icon-lg"></i></div>
+                <h2 id="request-modal-title">Request a tutor</h2>
+                <p>Complete this form and we'll match your child with a volunteer tutor.</p>
+            </div>
+            <form id="request-form" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="req-name">Student Name <span class="required">*</span></label>
+                        <input type="text" id="req-name" placeholder="Student's full name" required>
+                        <span class="form-error" id="req-name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="req-grade">Student Grade <span class="required">*</span></label>
+                        <input type="text" id="req-grade" placeholder="e.g. 5th Grade" required>
+                        <span class="form-error" id="req-grade-error"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="req-parent">Parent/Guardian Name <span class="required">*</span></label>
+                    <input type="text" id="req-parent" placeholder="Your full name" required>
+                    <span class="form-error" id="req-parent-error"></span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="req-email">Contact Email <span class="required">*</span></label>
+                        <input type="email" id="req-email" placeholder="your.email@example.com" required>
+                        <span class="form-error" id="req-email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="req-phone">Phone (Optional)</label>
+                        <input type="tel" id="req-phone" placeholder="(210) 555-0000">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="req-subjects">Subjects Needed <span class="required">*</span></label>
+                    <input type="text" id="req-subjects" placeholder="e.g. 5th Grade Math, Reading" required>
+                    <span class="form-error" id="req-subjects-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="req-availability">Availability <span class="required">*</span></label>
+                    <input type="text" id="req-availability" placeholder="e.g. Weekdays after 4pm" required>
+                    <span class="form-error" id="req-availability-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="req-notes">Additional Notes (Optional)</label>
+                    <textarea id="req-notes" rows="3"
+                        placeholder="Anything else we should know about your student..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-form">
+                    <span>Submit Request</span>
+                    <i data-lucide="send" class="icon-sm"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
